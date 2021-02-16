@@ -428,18 +428,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../transformations/" title="Transformation Viz" class="md-nav__link">
-      Transformation Viz
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../faq/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
@@ -567,18 +555,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/transformers/opentsne/" title="OpenTsne" class="md-nav__link">
-      OpenTsne
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../api/transformers/noise/" title="Noise" class="md-nav__link">
       Noise
     </a>
@@ -593,18 +569,6 @@
   <li class="md-nav__item">
     <a href="../../api/transformers/addrandom/" title="Add Random" class="md-nav__link">
       Add Random
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../api/transformers/ivis/" title="Ivis" class="md-nav__link">
-      Ivis
     </a>
   </li>
 
@@ -972,7 +936,9 @@ for example turn it into a numpy array.</p>
 <p>There are many visualisations implemented. In particular we offer interactive altair charts.
 These can be useful to show how points are clustered. Before plotting this, it might be common
 to apply a dimensionality reduction technique first.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">whatlies.transformers</span> <span class="kn">import</span> <span class="n">Pca</span><span class="p">,</span> <span class="n">Umap</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># To use the Umap feature you will need to install an extra dependency.</span>
+<span class="c1"># pip install whatlies[umap]</span>
+<span class="kn">from</span> <span class="nn">whatlies.transformers</span> <span class="kn">import</span> <span class="n">Pca</span><span class="p">,</span> <span class="n">Umap</span>
 
 <span class="n">p1</span> <span class="o">=</span> <span class="n">embset</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Pca</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">plot_interactive</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;pca&quot;</span><span class="p">)</span>
 <span class="n">p2</span> <span class="o">=</span> <span class="n">embset</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Umap</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">plot_interactive</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;umap&quot;</span><span class="p">)</span>

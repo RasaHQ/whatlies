@@ -374,18 +374,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../tutorial/transformations/" title="Transformation Viz" class="md-nav__link">
-      Transformation Viz
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../../faq/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
@@ -517,18 +505,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../opentsne/" title="OpenTsne" class="md-nav__link">
-      OpenTsne
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../noise/" title="Noise" class="md-nav__link">
       Noise
     </a>
@@ -589,18 +565,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ivis/" title="Ivis" class="md-nav__link">
-      Ivis
-    </a>
   </li>
 
         
@@ -955,9 +919,9 @@
 <span class="n">emb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">AddRandom</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">plot_interactive_matrix</span><span class="p">(</span><span class="s1">&#39;rand_0&#39;</span><span class="p">,</span> <span class="s1">&#39;rand_1&#39;</span><span class="p">,</span> <span class="s1">&#39;rand_2&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="whatlies.transformers._addrandom.AddRandom.fit"><code class="highlight"><span class="n">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">)</span></code><a class="headerlink" href="#whatlies.transformers._addrandom.AddRandom.fit" title="Permanent link">&para;</a></h2>
-<details class="note"><summary>Show source code in <code>transformers/_addrandom.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>38
-39
-40</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">):</span>
+<details class="note"><summary>Show source code in <code>transformers/_addrandom.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">is_fitted</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="bp">self</span>
 </code></pre></div>
@@ -985,17 +949,17 @@ set the <code>is_fitted</code> flag to <code>True</code>.</p>
 </tbody>
 </table>
 <h2 id="whatlies.transformers._addrandom.AddRandom.transform"><code class="highlight"><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">)</span></code><a class="headerlink" href="#whatlies.transformers._addrandom.AddRandom.transform" title="Permanent link">&para;</a></h2>
-<details class="note"><summary>Show source code in <code>transformers/_addrandom.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">):</span>
+<details class="note"><summary>Show source code in <code>transformers/_addrandom.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">):</span>
         <span class="n">names</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">embset</span><span class="o">.</span><span class="n">to_names_X</span><span class="p">()</span>
         <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">)</span>
         <span class="n">orig_dict</span> <span class="o">=</span> <span class="n">embset</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1065,13 +1029,13 @@ set the <code>is_fitted</code> flag to <code>True</code>.</p>
             </a>
           
           
-            <a href="../ivis/" title="Ivis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../../language/spacy_lang/" title="spaCy" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Ivis
+                  spaCy
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">

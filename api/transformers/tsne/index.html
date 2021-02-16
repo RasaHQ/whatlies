@@ -374,18 +374,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../tutorial/transformations/" title="Transformation Viz" class="md-nav__link">
-      Transformation Viz
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../../faq/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
@@ -555,18 +543,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../opentsne/" title="OpenTsne" class="md-nav__link">
-      OpenTsne
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../noise/" title="Noise" class="md-nav__link">
       Noise
     </a>
@@ -581,18 +557,6 @@
   <li class="md-nav__item">
     <a href="../addrandom/" title="Add Random" class="md-nav__link">
       Add Random
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ivis/" title="Ivis" class="md-nav__link">
-      Ivis
     </a>
   </li>
 
@@ -954,13 +918,13 @@ You may also notice that it is relatively slow. This unfortunately is a fact of 
 <span class="n">emb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Tsne</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">plot_interactive_matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="whatlies.transformers._tsne.Tsne.transform"><code class="highlight"><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">)</span></code><a class="headerlink" href="#whatlies.transformers._tsne.Tsne.transform" title="Permanent link">&para;</a></h2>
-<details class="note"><summary>Show source code in <code>transformers/_tsne.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>46
-47
-48
-49
-50
-51
-52</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">):</span>
+<details class="note"><summary>Show source code in <code>transformers/_tsne.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embset</span><span class="p">):</span>
         <span class="n">names</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">embset</span><span class="o">.</span><span class="n">to_names_X</span><span class="p">()</span>
         <span class="c1"># We are re-writing the transform method here because TSNE cannot .fit().transform().</span>
         <span class="c1"># Check the docs here: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html#sklearn.manifold.TSNE</span>
@@ -1026,13 +990,13 @@ You may also notice that it is relatively slow. This unfortunately is a fact of 
             </a>
           
           
-            <a href="../opentsne/" title="OpenTsne" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../noise/" title="Noise" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  OpenTsne
+                  Noise
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">

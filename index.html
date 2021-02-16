@@ -320,13 +320,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#brief-introduction" class="md-nav__link">
-    Brief Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#produced" class="md-nav__link">
     Produced
   </a>
@@ -479,18 +472,6 @@
 
 
   <li class="md-nav__item">
-    <a href="tutorial/transformations/" title="Transformation Viz" class="md-nav__link">
-      Transformation Viz
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="faq/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
@@ -618,18 +599,6 @@
 
 
   <li class="md-nav__item">
-    <a href="api/transformers/opentsne/" title="OpenTsne" class="md-nav__link">
-      OpenTsne
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="api/transformers/noise/" title="Noise" class="md-nav__link">
       Noise
     </a>
@@ -644,18 +613,6 @@
   <li class="md-nav__item">
     <a href="api/transformers/addrandom/" title="Add Random" class="md-nav__link">
       Add Random
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="api/transformers/ivis/" title="Ivis" class="md-nav__link">
-      Ivis
     </a>
   </li>
 
@@ -943,13 +900,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#brief-introduction" class="md-nav__link">
-    Brief Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#produced" class="md-nav__link">
     Produced
   </a>
@@ -1040,10 +990,6 @@
                 <h1 id="whatlies">WhatLies<a class="headerlink" href="#whatlies" title="Permanent link">&para;</a></h1>
 <p><img src="logo.png"></p>
 <p>A library that tries help you to understand. "What lies in word embeddings?"</p>
-<h2 id="brief-introduction">Brief Introduction<a class="headerlink" href="#brief-introduction" title="Permanent link">&para;</a></h2>
-<p>If you prefer a video tutorial before reading the getting started guide watch this;</p>
-<iframe width="100%" height=450 src="https://www.youtube-nocookie.com/embed/FwkwC7IJWO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 <h2 id="produced">Produced<a class="headerlink" href="#produced" title="Permanent link">&para;</a></h2>
 <p><img src="square-logo.svg" width=150 height=150 align="right"></p>
 <p>This project was initiated at <a href="https://rasa.com">Rasa</a> as a fun side project
@@ -1079,10 +1025,10 @@ transformers and language backends that you'll be using you
 may want to install more. Here's all the possible installation
 settings you could go for.</p>
 <pre><code class="language-bash">pip install whatlies[base]
+pip install whatlies[umap]
+pip install whatlies[spacy]
 pip install whatlies[tfhub]
 pip install whatlies[transformers]
-pip install whatlies[ivis]
-pip install whatlies[opentsne]
 pip install whatlies[sense2vec]
 </code></pre>
 <p>If you want it all you can also install via;</p>
