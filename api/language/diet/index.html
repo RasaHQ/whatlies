@@ -13,7 +13,7 @@
         <meta name="description" content="A python package to discover "what lies" in word embeddings.">
       
       
-        <link rel="canonical" href="https://rasahq.github.io/whatlies/api/language/universal_sentence/">
+        <link rel="canonical" href="https://rasahq.github.io/whatlies/api/language/diet/">
       
       
         <meta name="author" content="Vincent D. Warmerdam @ Rasa Research">
@@ -42,7 +42,7 @@
     
     
       
-        <title>USE - whatlies</title>
+        <title>DIET - whatlies</title>
       
     
     
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#whatlies.language._sentence_encode_lang.UniversalSentenceLanguage" tabindex="0" class="md-skip">
+      <a href="#whatlieslanguagedietlanguage" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -119,7 +119,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                USE
+                DIET
               
             </span>
           
@@ -683,45 +683,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        USE
-      </label>
-    
-    <a href="./" title="USE" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../universal_sentence/" title="USE" class="md-nav__link">
       USE
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#whatlies.language._sentence_encode_lang.UniversalSentenceLanguage" class="md-nav__link">
-    UniversalSentenceLanguage()
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -741,11 +707,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../diet/" title="DIET" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DIET
+      </label>
+    
+    <a href="./" title="DIET" class="md-nav__link md-nav__link--active">
       DIET
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whatlies.language._diet_lang.DIETLanguage.9595getitem9595" class="md-nav__link">
+    __getitem__()
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -845,13 +849,15 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whatlies.language._sentence_encode_lang.UniversalSentenceLanguage" class="md-nav__link">
-    UniversalSentenceLanguage()
+  <a href="#whatlies.language._diet_lang.DIETLanguage.9595getitem9595" class="md-nav__link">
+    __getitem__()
   </a>
   
 </li>
@@ -872,147 +878,88 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/RasaHQ/whatlies/edit/master/docs/api/language/universal_sentence.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/RasaHQ/whatlies/edit/master/docs/api/language/diet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>USE</h1>
-                
-                <h2 id="whatlies.language._sentence_encode_lang.UniversalSentenceLanguage"><code class="highlight"><span class="n">UniversalSentenceLanguage</span><span class="p">(</span><span class="n">variant</span><span class="o">=</span><span class="s1">&#39;base&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#whatlies.language._sentence_encode_lang.UniversalSentenceLanguage" title="Permanent link">&para;</a></h2>
-<details class="note"><summary>Show source code in <code>language/_sentence_encode_lang.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">UniversalSentenceLanguage</span><span class="p">(</span><span class="n">variant</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Retreive a [universal sentence encoder](https://tfhub.dev/google/collections/universal-sentence-encoder/1) model from tfhub.</span>
-
-<span class="sd">    You can download specific versions for specific variants. The variants that we support are listed below.</span>
-
-<span class="sd">    - `&quot;base&quot;`: the base variant (915MB) [link](https://tfhub.dev/google/universal-sentence-encoder/4)</span>
-<span class="sd">    - `&quot;large&quot;`: the large variant (523MB) [link](https://tfhub.dev/google/universal-sentence-encoder-large/5)</span>
-<span class="sd">    - `&quot;qa&quot;`: the variant based on question/answer (528MB) [link](https://tfhub.dev/google/universal-sentence-encoder-qa/3)</span>
-<span class="sd">    - `&quot;multi&quot;`: the multi-language variant (245MB) [link](https://tfhub.dev/google/universal-sentence-encoder-multilingual/3)</span>
-<span class="sd">    - `&quot;multi-large&quot;`: the large multi-language variant (303MB) [link](https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3)</span>
-<span class="sd">    - `&quot;multi-qa&quot;`: the multi-language qa variant (310MB) [link](https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3)</span>
-
-<span class="sd">    TFHub reports that the multi-language models support Arabic, Chinese-simplified, Chinese-traditional,</span>
-<span class="sd">    English, French, German, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Spanish, Thai, Turkish and Russian.</span>
-
-<span class="sd">    Important:</span>
-<span class="sd">        This object will automatically download a large file if it is not cached yet.</span>
-
-<span class="sd">        This language model does not contain a vocabulary, so it cannot be used</span>
-<span class="sd">        to retreive similar tokens. Use an `EmbeddingSet` instead.</span>
-
-<span class="sd">        This language backend might require you to manually install extra dependencies</span>
-<span class="sd">        unless you installed via either;</span>
-
-<span class="sd">        ```</span>
-<span class="sd">        pip install whatlies[tfhub]</span>
-<span class="sd">        pip install whatlies[all]</span>
-<span class="sd">        ```</span>
-
-<span class="sd">    Arguments:</span>
-<span class="sd">        variant: select a specific variant</span>
-<span class="sd">        version: select a specific version, if kept `None` we&#39;ll assume the most recent version</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">urls</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;large&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder-large/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;qa&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder-qa/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;multi&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder-multilingual/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;multi-large&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;multi-qa&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3&quot;</span><span class="p">,</span>
-    <span class="p">}</span>
-
-    <span class="n">versions</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s2">&quot;large&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;qa&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;multi&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;multi-large&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;multi-qa&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="p">}</span>
-
-    <span class="n">version</span> <span class="o">=</span> <span class="n">versions</span><span class="p">[</span><span class="n">variant</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">version</span> <span class="k">else</span> <span class="n">version</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="n">variant</span><span class="p">]</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">TFHubLanguage</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-</details>
-<p>Retreive a <a href="https://tfhub.dev/google/collections/universal-sentence-encoder/1">universal sentence encoder</a> model from tfhub.</p>
-<p>You can download specific versions for specific variants. The variants that we support are listed below.</p>
-<ul>
-<li><code>"base"</code>: the base variant (915MB) <a href="https://tfhub.dev/google/universal-sentence-encoder/4">link</a></li>
-<li><code>"large"</code>: the large variant (523MB) <a href="https://tfhub.dev/google/universal-sentence-encoder-large/5">link</a></li>
-<li><code>"qa"</code>: the variant based on question/answer (528MB) <a href="https://tfhub.dev/google/universal-sentence-encoder-qa/3">link</a></li>
-<li><code>"multi"</code>: the multi-language variant (245MB) <a href="https://tfhub.dev/google/universal-sentence-encoder-multilingual/3">link</a></li>
-<li><code>"multi-large"</code>: the large multi-language variant (303MB) <a href="https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3">link</a></li>
-<li><code>"multi-qa"</code>: the multi-language qa variant (310MB) <a href="https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3">link</a></li>
-</ul>
-<p>TFHub reports that the multi-language models support Arabic, Chinese-simplified, Chinese-traditional,
-English, French, German, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Spanish, Thai, Turkish and Russian.</p>
+                <h1 id="whatlieslanguagedietlanguage"><code>whatlies.language.DIETLanguage</code><a class="headerlink" href="#whatlieslanguagedietlanguage" title="Permanent link">&para;</a></h1>
+<p>This language represents the transformer output of a Rasa pipeline. You can use it for debugging.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>This object will automatically download a large file if it is not cached yet.</p>
 <p>This language model does not contain a vocabulary, so it cannot be used
 to retreive similar tokens. Use an <code>EmbeddingSet</code> instead.</p>
 <p>This language backend might require you to manually install extra dependencies
 unless you installed via either;</p>
-<div class="highlight"><pre><span></span><code>pip install whatlies[tfhub]
-pip install whatlies[all]
+<div class="highlight"><pre><span></span><code>pip install whatlies[rasa]
 </code></pre></div>
+<p>Note that we only support Rasa &gt; 2.3.</p>
 </div>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">whatlies.language</span> <span class="kn">import</span> <span class="n">DIETLangauge</span><span class="p">(</span><span class="s2">&quot;path/to/model.tar.gz&quot;</span><span class="p">)</span>
+<span class="n">lang</span><span class="p">[[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;greetings&#39;</span><span class="p">]]</span>
+</code></pre></div>
+<h2 id="whatlies.language._diet_lang.DIETLanguage.__getitem__"><code class="highlight"><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span></code><a class="headerlink" href="#whatlies.language._diet_lang.DIETLanguage.__getitem__" title="Permanent link">&para;</a></h2>
+<details class="note"><summary>Show source code in <code>language/_diet_lang.py</code></summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retreive a single embedding or a set of embeddings. We retreive the sentence encoding that</span>
+<span class="sd">        belongs to the entire utterance.</span>
+
+<span class="sd">        Arguments:</span>
+<span class="sd">            item: single string or list of strings</span>
+
+<span class="sd">        **Usage**</span>
+<span class="sd">        ```python</span>
+<span class="sd">        from whatlies.language import DIETLangauge(&quot;path/to/model.tar.gz&quot;)</span>
+<span class="sd">        lang[[&#39;hi&#39;, &#39;hello&#39;, &#39;greetings&#39;]]</span>
+<span class="sd">        ```</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">RuntimeWarning</span><span class="p">)</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">Message</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">})</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipeline</span><span class="p">:</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="n">diagnostic_data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">as_dict_nlu</span><span class="p">()[</span><span class="s2">&quot;diagnostic_data&quot;</span><span class="p">]</span>
+                <span class="n">key_of_interest</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">diagnostic_data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="s2">&quot;DIET&quot;</span> <span class="ow">in</span> <span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="c1"># It&#39;s assumed that the final token in the array here represents the __CLS__ token.</span>
+                <span class="c1"># These are also known as the &quot;sentence embeddings&quot;</span>
+                <span class="n">tensors</span> <span class="o">=</span> <span class="n">diagnostic_data</span><span class="p">[</span><span class="n">key_of_interest</span><span class="p">][</span><span class="s2">&quot;text_transformed&quot;</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">tensors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">EmbeddingSet</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">item</span><span class="p">])</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Item must be list of strings got </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+</details>
+<p>Retreive a single embedding or a set of embeddings. We retreive the sentence encoding that
+belongs to the entire utterance.</p>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
@@ -1025,19 +972,17 @@ pip install whatlies[all]
 </thead>
 <tbody>
 <tr>
-<td><code>variant</code></td>
-<td><code>str</code></td>
-<td>select a specific variant</td>
-<td><code>'base'</code></td>
-</tr>
-<tr>
-<td><code>version</code></td>
-<td><code>Optional[int]</code></td>
-<td>select a specific version, if kept <code>None</code> we'll assume the most recent version</td>
-<td><code>None</code></td>
+<td><code>item</code></td>
+<td></td>
+<td>single string or list of strings</td>
+<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Usage</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">whatlies.language</span> <span class="kn">import</span> <span class="n">DIETLangauge</span><span class="p">(</span><span class="s2">&quot;path/to/model.tar.gz&quot;</span><span class="p">)</span>
+<span class="n">lang</span><span class="p">[[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;greetings&#39;</span><span class="p">]]</span>
+</code></pre></div></p>
                 
                   
                 
@@ -1059,7 +1004,7 @@ pip install whatlies[all]
       <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
           
-            <a href="../tfhub/" title="TFHub" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../sentence_tfm/" title="Sent TFM" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
                 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
               </div>
@@ -1068,19 +1013,19 @@ pip install whatlies[all]
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  TFHub
+                  Sent TFM
                 </span>
               </div>
             </a>
           
           
-            <a href="../sentence_tfm/" title="Sent TFM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../../../examples/lipstick-pig/" title="Debiasing Projections" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Sent TFM
+                  Debiasing Projections
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">

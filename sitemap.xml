@@ -1,123 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://rasahq.github.io/whatlies/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/tutorial/quickstart/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/tutorial/embeddings/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/tutorial/embeddingsets/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/tutorial/scikit-learn/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/faq/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/embedding/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/embeddingset/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/helpers/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/transformers/pca/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/transformers/umap/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/transformers/tsne/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/transformers/noise/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/transformers/addrandom/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/spacy_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/fasttext_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/countvector_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/tfidf_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/bpemb_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/convert_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/gensim_lang/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/transformers/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/labse/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/tfhub/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/universal_sentence/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/api/language/sentence_tfm/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://rasahq.github.io/whatlies/api/language/diet/</loc>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/examples/lipstick-pig/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/examples/arabic/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/roadmap/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://rasahq.github.io/whatlies/releases/</loc>
-     <lastmod>2021-02-16</lastmod>
+     <lastmod>2021-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
