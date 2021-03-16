@@ -1,0 +1,236 @@
+{
+  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+  "layer": [
+    {
+      "mark": {"type": "circle", "size": 60},
+      "encoding": {
+        "color": {"type": "nominal", "field": "is_color"},
+        "tooltip": [
+          {"type": "nominal", "field": "name"},
+          {"type": "nominal", "field": "original"}
+        ],
+        "x": {
+          "type": "quantitative",
+          "axis": {"title": "Dimension 0"},
+          "field": "x_axis"
+        },
+        "y": {
+          "type": "quantitative",
+          "axis": {"title": "Dimension 1"},
+          "field": "y_axis"
+        }
+      },
+      "selection": {
+        "selector030": {
+          "type": "interval",
+          "bind": "scales",
+          "encodings": ["x", "y"]
+        }
+      },
+      "title": "Dimension 0 vs. Dimension 1"
+    },
+    {
+      "mark": {"type": "text", "color": "black", "dx": -15, "dy": 3},
+      "encoding": {
+        "text": {"type": "nominal", "field": "original"},
+        "x": {"type": "quantitative", "field": "x_axis"},
+        "y": {"type": "quantitative", "field": "y_axis"}
+      }
+    }
+  ],
+  "data": {"name": "data-f3f9c971b768fb3375b8504134e2623b"},
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-f3f9c971b768fb3375b8504134e2623b": [
+      {
+        "x_axis": -1.1068142652511597,
+        "y_axis": 3.6089165210723877,
+        "name": "prince",
+        "original": "prince",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.6174889802932739,
+        "y_axis": 3.8127198219299316,
+        "name": "princess",
+        "original": "princess",
+        "is_color": false
+      },
+      {
+        "x_axis": -1.279261589050293,
+        "y_axis": -1.8857892751693726,
+        "name": "nurse",
+        "original": "nurse",
+        "is_color": false
+      },
+      {
+        "x_axis": -1.2431070804595947,
+        "y_axis": -1.9855015277862549,
+        "name": "doctor",
+        "original": "doctor",
+        "is_color": false
+      },
+      {
+        "x_axis": 0.2730971574783325,
+        "y_axis": -0.3385468125343323,
+        "name": "banker",
+        "original": "banker",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.8144710063934326,
+        "y_axis": -1.6401382684707642,
+        "name": "man",
+        "original": "man",
+        "is_color": false
+      },
+      {
+        "x_axis": -1.278905987739563,
+        "y_axis": -1.5369161367416382,
+        "name": "woman",
+        "original": "woman",
+        "is_color": false
+      },
+      {
+        "x_axis": -2.859823703765869,
+        "y_axis": 0.5014649033546448,
+        "name": "cousin",
+        "original": "cousin",
+        "is_color": false
+      },
+      {
+        "x_axis": -3.103956460952759,
+        "y_axis": 0.20223110914230347,
+        "name": "neice",
+        "original": "neice",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.8523176312446594,
+        "y_axis": 4.182327747344971,
+        "name": "king",
+        "original": "king",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.8111287951469421,
+        "y_axis": 3.853283166885376,
+        "name": "queen",
+        "original": "queen",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.642210066318512,
+        "y_axis": -1.4291146993637085,
+        "name": "dude",
+        "original": "dude",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.6560670137405396,
+        "y_axis": -2.007174015045166,
+        "name": "guy",
+        "original": "guy",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.24289387464523315,
+        "y_axis": -1.1420514583587646,
+        "name": "gal",
+        "original": "gal",
+        "is_color": false
+      },
+      {
+        "x_axis": 1.6600536108016968,
+        "y_axis": -0.785841703414917,
+        "name": "fire",
+        "original": "fire",
+        "is_color": false
+      },
+      {
+        "x_axis": 0.3876773715019226,
+        "y_axis": -1.6836758852005005,
+        "name": "dog",
+        "original": "dog",
+        "is_color": false
+      },
+      {
+        "x_axis": 0.6095154285430908,
+        "y_axis": -0.8076506853103638,
+        "name": "cat",
+        "original": "cat",
+        "is_color": false
+      },
+      {
+        "x_axis": 1.643246054649353,
+        "y_axis": -0.13626602292060852,
+        "name": "mouse",
+        "original": "mouse",
+        "is_color": false
+      },
+      {
+        "x_axis": 3.958299398422241,
+        "y_axis": 0.5458947420120239,
+        "name": "red",
+        "original": "red",
+        "is_color": true
+      },
+      {
+        "x_axis": 4.017277717590332,
+        "y_axis": 0.7297344207763672,
+        "name": "blue",
+        "original": "blue",
+        "is_color": true
+      },
+      {
+        "x_axis": 4.240182876586914,
+        "y_axis": 0.46621713042259216,
+        "name": "green",
+        "original": "green",
+        "is_color": true
+      },
+      {
+        "x_axis": 4.326542854309082,
+        "y_axis": 0.5410885810852051,
+        "name": "yellow",
+        "original": "yellow",
+        "is_color": true
+      },
+      {
+        "x_axis": 2.633065700531006,
+        "y_axis": -1.2474069595336914,
+        "name": "water",
+        "original": "water",
+        "is_color": false
+      },
+      {
+        "x_axis": -0.9278630614280701,
+        "y_axis": -1.8552993535995483,
+        "name": "person",
+        "original": "person",
+        "is_color": false
+      },
+      {
+        "x_axis": -1.699795126914978,
+        "y_axis": -0.5136544108390808,
+        "name": "family",
+        "original": "family",
+        "is_color": false
+      },
+      {
+        "x_axis": -2.8267393112182617,
+        "y_axis": 0.30013883113861084,
+        "name": "brother",
+        "original": "brother",
+        "is_color": false
+      },
+      {
+        "x_axis": -2.786113977432251,
+        "y_axis": 0.25101277232170105,
+        "name": "sister",
+        "original": "sister",
+        "is_color": false
+      }
+    ]
+  }
+}

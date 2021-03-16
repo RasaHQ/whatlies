@@ -345,33 +345,6 @@
     Similar Projects
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#julia-bazinska-piotr-migdal-web-app" class="md-nav__link">
-    Julia Bazińska &amp; Piotr Migdal Web App
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorflow-projector" class="md-nav__link">
-    Tensorflow Projector
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parallax" class="md-nav__link">
-    Parallax
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -659,7 +632,7 @@
 
 
   <li class="md-nav__item">
-    <a href="api/language/s2v_lang.md" title="Sense2Vec" class="md-nav__link">
+    <a href="api/language/s2v_lang/" title="Sense2Vec" class="md-nav__link">
       Sense2Vec
     </a>
   </li>
@@ -937,33 +910,6 @@
     Similar Projects
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#julia-bazinska-piotr-migdal-web-app" class="md-nav__link">
-    Julia Bazińska &amp; Piotr Migdal Web App
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorflow-projector" class="md-nav__link">
-    Tensorflow Projector
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parallax" class="md-nav__link">
-    Parallax
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1052,39 +998,49 @@ want to visualise. For example, you might still
 need to manually download spaCy models if you intend
 to use that backend.</p>
 <h2 id="similar-projects">Similar Projects<a class="headerlink" href="#similar-projects" title="Permanent link">&para;</a></h2>
-<p>There are some projects out there who are working on similar tools and we figured it fair to mention and compare them here.</p>
-<h5 id="julia-bazinska-piotr-migdal-web-app">Julia Bazińska &amp; Piotr Migdal Web App<a class="headerlink" href="#julia-bazinska-piotr-migdal-web-app" title="Permanent link">&para;</a></h5>
-<p>The original inspiration for this project came from <a href="https://lamyiowce.github.io/word2viz/">this web app</a> and <a href="https://www.youtube.com/watch?v=AGgCqpouKSs">this pydata talk</a>. It is a web app that takes a while to load
-but it is really fun to play with. The goal of this project is to make it
-easier to make similar charts from jupyter using different language backends.</p>
-<h5 id="tensorflow-projector">Tensorflow Projector<a class="headerlink" href="#tensorflow-projector" title="Permanent link">&para;</a></h5>
-<p>From google there's the <a href="https://projector.tensorflow.org/">tensorflow projector project</a>. It offers
-highly interactive 3d visualisations as well as some transformations via tensorboard.</p>
-<ul>
-<li>The tensorflow projector will create projections in tensorboard, which you can also load
-into jupyter notebook but whatlies makes visualisations directly.</li>
-<li>The tensorflow projector supports interactive 3d visuals, which whatlies currently doesn't.</li>
-<li>Whatlies offers lego bricks that you can chain together to get a visualisation started. This
-also means that you're more flexible when it comes to transforming data before visualising it.</li>
-</ul>
-<h5 id="parallax">Parallax<a class="headerlink" href="#parallax" title="Permanent link">&para;</a></h5>
-<p>From Uber AI Labs there's <a href="https://github.com/uber-research/parallax">parallax</a> which is described
-in a paper <a href="https://arxiv.org/abs/1905.12099">here</a>. There's a common mindset in the two tools;
-the goal is to use arbitrary user defined projections to understand embedding spaces better.
-That said, some differences that are worth to mention.</p>
-<ul>
-<li>It relies on bokeh as a visualisation backend and offers a lot of visualisation types
-(like radar plots). Whatlies uses altair and tries to stick to simple scatter charts.
-Altair can export interactive html/svg but it will not scale as well if you've drawing
-many points at the same time.</li>
-<li>Parallax is meant to be run as a stand-alone app from the command line while Whatlies is
-meant to be run from the jupyter notebook.</li>
-<li>Parallax gives a full user interface while Whatlies offers lego bricks that you can chain
-together to get a visualisation started.</li>
-<li>Whatlies relies on language backends (like spaCy, huggingface) to fetch word embeddings.
-Parallax allows you to instead fetch raw files on disk.</li>
-<li>Parallax has been around for a while, Whatlies is more new and therefore more experimental.</li>
-</ul>
+<p>There are some similar projects out and we figured it fair to mention and compare them here.</p>
+<details>
+  <summary>Julia Bazińska & Piotr Migdal Web App</summary>
+    <p>The original inspiration for this project came from <a href="https://lamyiowce.github.io/word2viz/">this web app</a>
+    and <a href="https://www.youtube.com/watch?v=AGgCqpouKSs">this pydata talk</a>. It is a web app that takes a
+    while to load but it is really fun to play with. The goal of this project is to make it easier to make similar
+    charts from jupyter using different language backends.</p>
+</details>
+
+<details>
+    <summary>Tensorflow Projector</summary>
+    <p>From google there's the <a href="https://projector.tensorflow.org/">tensorflow projector project</a>. It offers
+    highly interactive 3d visualisations as well as some transformations via tensorboard.</p>
+    <ul>
+    <li>The tensorflow projector will create projections in tensorboard, which you can also load
+    into jupyter notebook but whatlies makes visualisations directly.</li>
+    <li>The tensorflow projector supports interactive 3d visuals, which whatlies currently doesn't.</li>
+    <li>Whatlies offers lego bricks that you can chain together to get a visualisation started. This
+    also means that you're more flexible when it comes to transforming data before visualising it.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Parallax</summary>
+    <p>From Uber AI Labs there's <a href="https://github.com/uber-research/parallax">parallax</a> which is described
+    in a paper <a href="https://arxiv.org/abs/1905.12099">here</a>. There's a common mindset in the two tools;
+    the goal is to use arbitrary user defined projections to understand embedding spaces better.
+    That said, some differences that are worth to mention.</p>
+    <ul>
+    <li>It relies on bokeh as a visualisation backend and offers a lot of visualisation types
+    (like radar plots). Whatlies uses altair and tries to stick to simple scatter charts.
+    Altair can export interactive html/svg but it will not scale as well if you've drawing
+    many points at the same time.</li>
+    <li>Parallax is meant to be run as a stand-alone app from the command line while Whatlies is
+    meant to be run from the jupyter notebook.</li>
+    <li>Parallax gives a full user interface while Whatlies offers lego bricks that you can chain
+    together to get a visualisation started.</li>
+    <li>Whatlies relies on language backends (like spaCy, huggingface) to fetch word embeddings.
+    Parallax allows you to instead fetch raw files on disk.</li>
+    <li>Parallax has been around for a while, Whatlies is more new and therefore more experimental.</li>
+    </ul>
+</details>
+
 <h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">&para;</a></h2>
 <p>Please use the following citation when you found <code>whatlies</code> helpful for any of your work (find the <code>whatlies</code> paper <a href="http://arxiv.org/abs/2009.02113">here</a>):</p>
 <pre><code>@misc{Warmerdam2020whatlies,

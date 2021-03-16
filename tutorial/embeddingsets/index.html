@@ -430,22 +430,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    Operators
+  <a href="#adding-color-to-the-charts" class="md-nav__link">
+    Adding Color to the Charts
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-components" class="md-nav__link">
-    More Components
+  <a href="#using-an-interactive-brush" class="md-nav__link">
+    Using an Interactive Brush
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-charts" class="md-nav__link">
-    More Charts
+  <a href="#large-matrix-visualisations" class="md-nav__link">
+    Large Matrix Visualisations
   </a>
   
 </li>
@@ -671,7 +671,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/language/s2v_lang.md" title="Sense2Vec" class="md-nav__link">
+    <a href="../../api/language/s2v_lang/" title="Sense2Vec" class="md-nav__link">
       Sense2Vec
     </a>
   </li>
@@ -977,22 +977,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    Operators
+  <a href="#adding-color-to-the-charts" class="md-nav__link">
+    Adding Color to the Charts
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-components" class="md-nav__link">
-    More Components
+  <a href="#using-an-interactive-brush" class="md-nav__link">
+    Using an Interactive Brush
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-charts" class="md-nav__link">
-    More Charts
+  <a href="#large-matrix-visualisations" class="md-nav__link">
+    Large Matrix Visualisations
   </a>
   
 </li>
@@ -1142,33 +1142,83 @@ fetch('tut2-chart4.json')
 .catch(err => { throw err });
 </script>
 
-<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
-<p>Note that the operators that we've seen before can also be added to a
-transformation pipeline.</p>
-<div class="highlight"><pre><span></span><code><span class="n">emb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span> <span class="o">|</span> <span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]))</span>
-<span class="c1"># (Emb | (Emb[man] - Emb[woman])).pca_2()</span>
+<h3 id="adding-color-to-the-charts">Adding Color to the Charts<a class="headerlink" href="#adding-color-to-the-charts" title="Permanent link">&para;</a></h3>
+<p>Sometimes it might be helpful to add color to the charts. In these situations we first need
+to add a property to the embeddings in the embeddingset. This property can then be picked up
+by a chart in order to make a subset stand out from the rest of the group.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">whatlies.language</span> <span class="kn">import</span> <span class="n">SpacyLanguage</span>
+<span class="kn">from</span> <span class="nn">whatlies.transformers</span> <span class="kn">import</span> <span class="n">Pca</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;prince&quot;</span><span class="p">,</span> <span class="s2">&quot;princess&quot;</span><span class="p">,</span> <span class="s2">&quot;nurse&quot;</span><span class="p">,</span> <span class="s2">&quot;doctor&quot;</span><span class="p">,</span> <span class="s2">&quot;banker&quot;</span><span class="p">,</span> <span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="s2">&quot;woman&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;cousin&quot;</span><span class="p">,</span> <span class="s2">&quot;neice&quot;</span><span class="p">,</span> <span class="s2">&quot;king&quot;</span><span class="p">,</span> <span class="s2">&quot;queen&quot;</span><span class="p">,</span> <span class="s2">&quot;dude&quot;</span><span class="p">,</span> <span class="s2">&quot;guy&quot;</span><span class="p">,</span> <span class="s2">&quot;gal&quot;</span><span class="p">,</span> <span class="s2">&quot;fire&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;mouse&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;water&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;person&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">,</span> <span class="s2">&quot;brother&quot;</span><span class="p">,</span> <span class="s2">&quot;sister&quot;</span><span class="p">]</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>  <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
+
+<span class="n">lang</span> <span class="o">=</span> <span class="n">SpacyLanguage</span><span class="p">(</span><span class="s2">&quot;en_core_web_md&quot;</span><span class="p">)</span>
+
+<span class="c1"># Notice the `assign` method, this is where we assign the `is_color` property</span>
+<span class="c1"># to each embedding in the embeddingset based on the &quot;name&quot;.</span>
+<span class="n">embset</span> <span class="o">=</span> <span class="p">(</span><span class="n">lang</span><span class="p">[</span><span class="n">words</span><span class="p">]</span>
+            <span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Pca</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">is_color</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">))</span>
+<span class="n">embset</span><span class="o">.</span><span class="n">plot_interactive</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;is_color&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="more-components">More Components<a class="headerlink" href="#more-components" title="Permanent link">&para;</a></h3>
-<p>Suppose now that we'd like to visualise three principal components. We could do this.</p>
-<div class="highlight"><pre><span></span><code><span class="n">pca_emb</span> <span class="o">=</span> <span class="n">emb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Pca</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">p1</span> <span class="o">=</span> <span class="n">pca_emb</span><span class="o">.</span><span class="n">plot_interactive</span><span class="p">()</span>
-<span class="n">p2</span> <span class="o">=</span> <span class="n">pca_emb</span><span class="o">.</span><span class="n">plot_interactive</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">p1</span> <span class="o">|</span> <span class="n">p2</span>
-</code></pre></div>
-<div id="vis5"></div>
+<div id="vis-color"></div>
 
 <script>
-fetch('tut2-chart5.json')
+fetch('tut-chart-color.json')
 .then(res => res.json())
 .then((out) => {
-  vegaEmbed('#vis5', out);
+  vegaEmbed('#vis-color', out);
 })
 .catch(err => { throw err });
 </script>
 
-<h3 id="more-charts">More Charts<a class="headerlink" href="#more-charts" title="Permanent link">&para;</a></h3>
-<p>Let's not draw two components at a time, let's draw all of them.</p>
-<div class="highlight"><pre><span></span><code><span class="n">pca_emb</span><span class="o">.</span><span class="n">plot_interactive_matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<h3 id="using-an-interactive-brush">Using an Interactive Brush<a class="headerlink" href="#using-an-interactive-brush" title="Permanent link">&para;</a></h3>
+<p>We can also choose to use <code>plot_hover</code> instead of <code>plot_interactive</code>. The hover chart cannot
+zoom in/out but it does allow you to draw a box to make a subselection. This can be very useful
+when you're trying to get an overview of a cluster of embeddings.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">whatlies.language</span> <span class="kn">import</span> <span class="n">SpacyLanguage</span>
+<span class="kn">from</span> <span class="nn">whatlies.transformers</span> <span class="kn">import</span> <span class="n">Pca</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;prince&quot;</span><span class="p">,</span> <span class="s2">&quot;princess&quot;</span><span class="p">,</span> <span class="s2">&quot;nurse&quot;</span><span class="p">,</span> <span class="s2">&quot;doctor&quot;</span><span class="p">,</span> <span class="s2">&quot;banker&quot;</span><span class="p">,</span> <span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="s2">&quot;woman&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;cousin&quot;</span><span class="p">,</span> <span class="s2">&quot;neice&quot;</span><span class="p">,</span> <span class="s2">&quot;king&quot;</span><span class="p">,</span> <span class="s2">&quot;queen&quot;</span><span class="p">,</span> <span class="s2">&quot;dude&quot;</span><span class="p">,</span> <span class="s2">&quot;guy&quot;</span><span class="p">,</span> <span class="s2">&quot;gal&quot;</span><span class="p">,</span> <span class="s2">&quot;fire&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;mouse&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;water&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;person&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">,</span> <span class="s2">&quot;brother&quot;</span><span class="p">,</span> <span class="s2">&quot;sister&quot;</span><span class="p">]</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>  <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
+
+<span class="n">lang</span> <span class="o">=</span> <span class="n">SpacyLanguage</span><span class="p">(</span><span class="s2">&quot;en_core_web_md&quot;</span><span class="p">)</span>
+<span class="n">embset</span> <span class="o">=</span> <span class="p">(</span><span class="n">lang</span><span class="p">[</span><span class="n">words</span><span class="p">]</span>
+            <span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Pca</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">is_color</span><span class="o">=</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">))</span>
+<span class="n">embset</span><span class="o">.</span><span class="n">plot_brush</span><span class="p">(</span><span class="n">n_show</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;is_color&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div id="vis-hover"></div>
+
+<script>
+fetch('tut-chart-hover.json')
+.then(res => res.json())
+.then((out) => {
+  vegaEmbed('#vis-hover', out);
+})
+.catch(err => { throw err });
+</script>
+
+<h3 id="large-matrix-visualisations">Large Matrix Visualisations<a class="headerlink" href="#large-matrix-visualisations" title="Permanent link">&para;</a></h3>
+<p>If you're up for it, you can draw large matrices of charts too.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">whatlies.language</span> <span class="kn">import</span> <span class="n">SpacyLanguage</span>
+<span class="kn">from</span> <span class="nn">whatlies.transformers</span> <span class="kn">import</span> <span class="n">Pca</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;prince&quot;</span><span class="p">,</span> <span class="s2">&quot;princess&quot;</span><span class="p">,</span> <span class="s2">&quot;nurse&quot;</span><span class="p">,</span> <span class="s2">&quot;doctor&quot;</span><span class="p">,</span> <span class="s2">&quot;banker&quot;</span><span class="p">,</span> <span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="s2">&quot;woman&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;cousin&quot;</span><span class="p">,</span> <span class="s2">&quot;neice&quot;</span><span class="p">,</span> <span class="s2">&quot;king&quot;</span><span class="p">,</span> <span class="s2">&quot;queen&quot;</span><span class="p">,</span> <span class="s2">&quot;dude&quot;</span><span class="p">,</span> <span class="s2">&quot;guy&quot;</span><span class="p">,</span> <span class="s2">&quot;gal&quot;</span><span class="p">,</span> <span class="s2">&quot;fire&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;mouse&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;bluee&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;water&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;person&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">,</span> <span class="s2">&quot;brother&quot;</span><span class="p">,</span> <span class="s2">&quot;sister&quot;</span><span class="p">]</span>
+
+<span class="n">lang</span> <span class="o">=</span> <span class="n">SpacyLanguage</span><span class="p">(</span><span class="s2">&quot;en_core_web_md&quot;</span><span class="p">)</span>
+<span class="n">lang</span><span class="p">[</span><span class="n">words</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Pca</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">plot_interactive_matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <div id="vis6"></div>
 
