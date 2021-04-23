@@ -1323,7 +1323,10 @@ class EmbeddingSet:
         ranked_text = (
             alt.Chart(plot_df)
             .mark_text()
-            .encode(y=alt.Y("row_number:O", axis=None))
+            .encode(
+                y=alt.Y("row_number:O", axis=None),
+                color=alt.Color(":N", legend=None) if not color else alt.Color(color),
+            )
             .transform_window(row_number="row_number()")
             .transform_filter(brush)
             .transform_window(rank="rank(row_number)")
